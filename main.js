@@ -49,4 +49,20 @@ function save() {
   localStorage.setItem('cookies', JSON.stringify(cookies));
   localStorage.setItem('cursor', JSON.stringify(cursor));
   localStorage.setItem('robot', JSON.stringify(robot));
+},
+
+var SAVE_KEY = 'save';
+
+function save(state) {
+  localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+},
+
+function load() {
+  return JSON.parse(localStorage.getItem(SAVE_KEY));
 }
+
+var state = load();
+state.cookies += 10000;
+state.cursor += 10;
+state.robot += 10;
+save(state);
