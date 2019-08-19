@@ -45,6 +45,7 @@ function buyBaker(){
     };
     var nextCost = Math.floor(1000 * Math.pow(1.2,bakers));       //works out the cost of the next baker
     document.getElementById('bakerCost').innerHTML = nextCost;  //updates the baker cost for the user
+};
 
 window.setInterval(function(){
 	
