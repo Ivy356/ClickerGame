@@ -55,12 +55,12 @@ window.setInterval(function(){
 
 window.setInterval(function(){
 	
-	cookieClick5(robots);
+	cookieClick(robots);
 	
 }, 900)
 
 window.setInterval(function(){
 	
-	cookieClick30(bakers);
+	cookieClick(bakers);
 	
 }, 800)
