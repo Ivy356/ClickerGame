@@ -29,9 +29,22 @@ function buyRobot(){
         document.getElementById('robots').innerHTML = robots;  //updates the number of robots for the user
         document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
     };
-    var nextCost = Math.floor(120 * Math.pow(1.2,robots));       //works out the cost of the next cursor
+    var nextCost = Math.floor(100 * Math.pow(1.2,robots));       //works out the cost of the next robot
     document.getElementById('robotCost').innerHTML = nextCost;  //updates the robot cost for the user
 };
+
+var bakers = 0;
+
+function buyBaker(){
+    var bakerCost = Math.floor(1000 * Math.pow(1.2,bakers));     //works out the cost of this baker
+    if(cookies >= bakerCost){                                   //checks that the player can afford the baker
+        bakers = bakers + 1;                                   //increases number of bakers
+    	cookies = cookies - robotCost;                          //removes the cookies spent
+        document.getElementById('bakers').innerHTML = bakers;  //updates the number of bakers for the user
+        document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
+    };
+    var nextCost = Math.floor(1000 * Math.pow(1.2,bakers));       //works out the cost of the next baker
+    document.getElementById('bakerCost').innerHTML = nextCost;  //updates the baker cost for the user
 
 window.setInterval(function(){
 	
@@ -44,3 +57,9 @@ window.setInterval(function(){
 	cookieClick(robots);
 	
 }, 100)
+
+window.setInterval(function(){
+	
+	cookieClick(bakers);
+	
+}, 10)
