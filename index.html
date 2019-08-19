@@ -4,26 +4,27 @@
 		<title>Clicker Idle</title>
 	</head>
 	<body>
-		<button onclick="cookieClick(1)">Tap!</button>
-		<br />
+		<div class = "clearfix"></div>
+    <canvas id="myCanvas" width="1000" height="750"></canvas>
+    <div class="menu">
+      <div class="tab">
+        <button class="tablinks" onclick="switchTab(event, 'Main')" id="defaultOpen">Main</button>
+        <button class="tablinks" onclick="switchTab(event, 'Buildings')">Buildings</button>
+        <button class="tablinks" onclick="switchTab(event, 'Upgrades')">Upgrades</button>
+        <button class="tablinks" onclick="switchTab(event, 'Settings')">Settings</button>
+      </div>
+		<div id="Main" class="tabcontent">
 		Cookies: <span id="cookies">0</span>
-		<br />
-		<button class="tablinks" onclick="switchTab(event, 'Buildings')">Buildings</button>
-		<br />
+		<button onclick="cookieClick(1)">Tap!</button>
+		</div>
 		<div id="Buildings" class="tabcontent">
-		<br />
 		<button onclick="buyCursor()">Buy Cursor</button>
-		<br />
 		Cursors: <span id="cursors">0</span>
-		<br />
 		Cursor Cost: <span id="cursorCost">10</span>
-		<br />
 		<button onclick="buyRobot()">Buy Robot</button>
-		<br />
 		Robots: <span id="robots">0</span>
-		<br />
 	        Robot Cost: <span id="robotCost">100</span>
-                </div>
+	        </div> 
 		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
