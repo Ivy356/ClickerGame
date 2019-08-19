@@ -43,4 +43,4 @@ window.setInterval(function(){
 	
 	cookieClick(robots);
 	
-}, 5000);
+}, 200);
