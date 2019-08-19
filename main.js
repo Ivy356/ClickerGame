@@ -53,14 +53,14 @@ window.setInterval(function(){
 	
 }, 1000);
 
-window.setInterval(function(5){
+window.setInterval(function(){
 	
-	cookieClick(robots);
+	cookieClick5(robots);
 	
 }, 900)
 
-window.setInterval(function(30){
+window.setInterval(function(){
 	
-	cookieClick(bakers);
+	cookieClick30(bakers);
 	
 }, 800)
