@@ -29,7 +29,7 @@ function buyRobot(){
         document.getElementById('robots').innerHTML = robots;  //updates the number of robots for the user
         document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
     };
-    var nextCost = Math.floor(20 * Math.pow(1.2,robots));       //works out the cost of the next cursor
+    var nextCost = Math.floor(120 * Math.pow(1.2,robots));       //works out the cost of the next cursor
     document.getElementById('robotCost').innerHTML = nextCost;  //updates the robot cost for the user
 };
 
@@ -38,3 +38,9 @@ window.setInterval(function(){
 	cookieClick(cursors);
 	
 }, 1000);
+
+window.setInterval(function(){
+	
+	cookieClick(robots);
+	
+}, 5000);
