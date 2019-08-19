@@ -43,4 +43,10 @@ window.setInterval(function(){
 	
 	cookieClick(robots);
 	
-}, 200);
+}, 100);
+
+function save() {
+  localStorage.setItem('cookies', JSON.stringify(cookies));
+  localStorage.setItem('cursor', JSON.stringify(cursor));
+  localStorage.setItem('robot', JSON.stringify(robot));
+}
